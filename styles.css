@@ -1,0 +1,91 @@
+
+body{
+  margin: 0px;
+  padding: 0px;
+  background: #FFFFFF;
+}
+
+.login_form{
+  position: absolute;
+  width: 400px;
+  height: 250px;
+  background: #edeff1;
+  margin: 0px auto;
+  padding-top: 20px;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  margin-left: -200px;
+  margin-top: -125px;
+}
+
+input[type="text"]{
+  display: block;
+  width: 309px;
+  height: 35px;
+  margin: 15px auto;
+  background: #FFF;
+  border: 0px;
+  padding: 5px;
+  font-size: 16px;
+  border: 2px solid #FFf;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+input[type="password"]:focus{
+  border: 2px solid #92A7BA
+}
+
+input[type="password"]{
+  display: block;
+  width: 309px;
+  height: 35px;
+  margin: 15px auto;
+  background: #FFF;
+  border: 0px;
+  padding: 5px;
+  font-size: 16px;
+  border: 2px solid #FFF;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+input[type="text"]:focus{
+  border: 2px solid #92A7BA
+}
+
+input[type="submit"]{
+  display: block;
+  background: #92A7BA;
+  width: 314px;
+  padding: 12px;
+  cursor: pointer;
+  color: #FFF;
+  border: 0px;
+  margin: auto;
+  border-radius: 5px;
+  font-size: 17px;
+  transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover{
+  background: #52677A
+}
+
+a{
+  text-align: center;
+  font-family: Arial;
+  color: gray;
+  display: block;
+  margin: 15px auto;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 12px;
+}
+
+a:hover{
+  color: #92A7BA;
+}
+
+
