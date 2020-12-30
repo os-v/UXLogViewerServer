@@ -45,7 +45,7 @@ function ValidateRLForm(sEmailID, sPasswordID, sConfirmID, fAlert, sConfirmError
 
 function ValidatePCForm(sOldPasswordID, sNewPasswordID, sConfirmID, fAlert)
 {
-	if(ValidatePassword(document.getElementsByName(sOldPasswordID)[0].value, fAlert).length)
+	if(sOldPasswordID != null && ValidatePassword(document.getElementsByName(sOldPasswordID)[0].value, fAlert).length)
 		return false;
 	if(ValidatePassword(document.getElementsByName(sNewPasswordID)[0].value, fAlert).length)
 		return false;

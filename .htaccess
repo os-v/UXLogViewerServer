@@ -1,4 +1,4 @@
-DirectoryIndex Login.php
+DirectoryIndex Index.php
 
 <IfModule mod_headers.c>
     Header set Cache-Control "no-cache, no-store, must-revalidate"

@@ -20,6 +20,7 @@ function ProcessRequest()
 {
 
 	$pResponse = new stdClass();
+	$pResponse->error = "";
 
 	$sRequest = file_get_contents("php://input");
 	if($sRequest == "")
@@ -31,13 +32,22 @@ function ProcessRequest()
 	$pRequest = json_decode($sRequest);
 
 	$pUser = new CUsersInfo();
-	if(!$pUser->Load($pRequest->username, $pRequest->password))
+	if(!$pUser->Load($pRequest->username, "", $pRequest->password))
 	{
 		$pResponse->error = "Invalid username or password";
 		return $pResponse;
 	}
 
-	if(isset($pRequest->themes))
+	$fUpload = isset($pRequest->themes);
+	if($pRequest->password == "" && !$pUser->IsPublic)
+		$pResponse->error = "Account is not public";
+	else if($pRequest->password == "" && $fUpload)
+		$pResponse->error = "Upload not allowed in public mode";
+
+	if($pResponse->error != "")
+		return $pResponse;
+
+	if($fUpload)
 	{
 		$pUser->ThemesDefs = $pRequest->themes;
 		$pUser->ActiveTheme = $pRequest->active;

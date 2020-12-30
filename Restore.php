@@ -29,15 +29,11 @@ function ProcessRequest()
 	if(!$pUser->Load($sUserInfo))
 		return "invalid username";
 
-	$sNewPassword = "";
-	for($iChar = 0; $iChar < 8; $iChar++)
-	    $sNewPassword .= mt_rand('0', '9');
-	$pUser->UserPass = md5($sNewPassword);
-	$pUser->Save();
+	$pUser->CreateRestoreKey();
 
 	$sMailBody  = "<html><body>";
-	$sMailBody .= "Your new password for UXLogViewer account is ".$sNewPassword."<br>";
-	$sMailBody .= "Please click <a href='https://lv.os-v.pw/Login.php'>Login</a> link to login to your account.";
+	$sMailBody .= "Your UXLogViewer account was requested for password reset.<br>";
+	$sMailBody .= "Please click <a href='https://lv.os-v.pw/RestoreChange.php?username=".$pUser->UserInfo."&restorekey=".$pUser->RestoreKey."'>Restore</a> link to change your password.";
 	$sMailBody .= "</body></html>";
 	CCommon::SendMail($sUserInfo, "UXLogViewer password reset", $sMailBody);
 
@@ -50,7 +46,7 @@ function ProcessRequest()
 
 <html>
 	<head>
-  		<title>Login page</title>
+  		<title>Restore password page</title>
 		<link rel="stylesheet" href="styles.css?ver=1">
 		<script src="Common.js"></script>
 	</head>

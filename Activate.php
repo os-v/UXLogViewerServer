@@ -12,7 +12,6 @@ include_once(__DIR__."/Database.php");
 include_once(__DIR__."/UsersInfo.php");
 include_once(__DIR__."/UsersRegs.php");
 
-$sError = "";
 $sUserInfo = "";
 $sError = ProcessRequest();
 

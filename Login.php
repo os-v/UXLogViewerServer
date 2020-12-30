@@ -31,7 +31,7 @@ function ProcessRequest()
 		return "invalid email address";
 
 	$pUser = new CUsersInfo();
-	if(!$pUser->Load($sUserInfo, md5($_POST["password"])))
+	if($_POST["password"] == "" || !$pUser->Load($sUserInfo, $_POST["password"]))
 		return "invalid username or password";
 
 	$_SESSION["username"] = $sUserInfo;

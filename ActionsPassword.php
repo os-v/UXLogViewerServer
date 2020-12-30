@@ -25,12 +25,12 @@ function ProcessRequest()
 	if(!$pUser->Load($_SESSION["username"]))
 		return "invalid username or password";
 
-	if(md5($_POST["password"]) != $pUser->UserPass)
+	if(!$pUser->CheckPassword($_POST["password"]))
 		return "Invalid current password";
 	if($_POST["npassword"] != $_POST["cpassword"])
 		return "Confirmation should match new  password";
 
-	$pUser->UserPass = md5($_POST["npassword"]);
+	$pUser->SetPassword($_POST["npassword"]);
 	$pUser->Save();
 
 	header('Location: Actions.php');

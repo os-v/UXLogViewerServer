@@ -29,9 +29,10 @@ if(!$pUser->Load($_SESSION["username"]))
 	<body>
 		<div align="center" class="login_form">
 			You are logged in<br><br>
-			<input type="submit" value="View Themes" onclick="location.href='ActionsThemes.php'"/><br>
-			<input type="submit" value="Change Password" onclick="location.href='ActionsPassword.php'"/><br>
-			<input type="submit" value="Logout" onclick="location.href='ActionsLogout.php'"/><br>
+			<input type="submit" value=<?php print($pUser->IsPublic ? '"Make Private"' : '"Make Public"'); ?> onclick="location.href='ActionsSwitchType.php'"/>
+			<input type="submit" value="View Themes" onclick="location.href='ActionsThemes.php'"/>
+			<input type="submit" value="Change Password" onclick="location.href='ActionsPassword.php'"/>
+			<input type="submit" value="Logout" onclick="location.href='ActionsLogout.php'"/>
 		</div>
   	</body>
 </html>
