@@ -11,7 +11,7 @@
 
 <html>
 	<head>
-  		<title>Login page</title>
+  		<title>Restore password instructions page</title>
 		<link rel="stylesheet" href="styles.css?ver=1">
 	</head>
 	<body>

@@ -58,7 +58,7 @@ function ProcessRequest($sNPassword, $sCPassword)
 
 <html>
 	<head>
-  		<title>Login page</title>
+  		<title>Restore password page</title>
 		<link rel="stylesheet" href="styles.css?ver=1">
 		<script src="Common.js"></script>
 	</head>

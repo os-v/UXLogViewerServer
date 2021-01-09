@@ -12,7 +12,7 @@
 
 <html>
 	<head>
-  		<title>Login page</title>
+  		<title>Main page</title>
 		<link rel="stylesheet" href="styles.css?ver=1">
 		<script src="Common.js"></script>
 	</head>
