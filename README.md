@@ -7,10 +7,9 @@
 - Login
 - Change password
 - Forget password
+- Public/Private sync
 
 ## Required Features
-- Improve 'forget password'
-- Add anonymous downsync
 
 ## License
 This software is distributed under the [MIT](https://github.com/os-v/UXLogViewerServer/blob/master/LICENSE) license. Please read LICENSE for information on the software availability and distribution.
