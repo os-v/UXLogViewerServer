@@ -33,7 +33,7 @@ function ProcessRequest()
 
 	$sMailBody  = "<html><body>";
 	$sMailBody .= "Your UXLogViewer account was requested for password reset.<br>";
-	$sMailBody .= "Please click <a href='https://lv.os-v.pw/RestoreChange.php?username=".$pUser->UserInfo."&restorekey=".$pUser->RestoreKey."'>Restore</a> link to change your password.";
+	$sMailBody .= "Please click <a href='https://os-v.pw/lv/RestoreChange.php?username=".$pUser->UserInfo."&restorekey=".$pUser->RestoreKey."'>Restore</a> link to change your password.";
 	$sMailBody .= "</body></html>";
 	CCommon::SendMail($sUserInfo, "UXLogViewer password reset", $sMailBody);
 

@@ -15,7 +15,7 @@ class CCommon
     {
 	$sHeaders  = "MIME-Version: 1.0"."\r\n";
 	$sHeaders .= "Content-type: text/html; charset=iso-8859-1"."\r\n";
-	$sHeaders .= "To: <".$sAddr.">\r\n";
+	//$sHeaders .= "To: <".$sAddr.">\r\n";
 	$sHeaders .= "From: UXLogViewer <UXLogViewer@os-v.pw>"."\r\n";
 	mail($sAddr, $sSubject, $sBody, $sHeaders);
     }

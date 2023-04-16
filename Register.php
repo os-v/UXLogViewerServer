@@ -42,7 +42,7 @@ function ProcessRequest()
 
 	$sMailBody  = "<html><body>";
 	$sMailBody .= "Your email was used to register account for UXLogViewer.<br>";
-	$sMailBody .= "Please click <a href='https://lv.os-v.pw/Activate.php?".$pUser->AuthKey."'>Activate</a> link to activate your account.";
+	$sMailBody .= "Please click <a href='https://os-v.pw/lv/Activate.php?".$pUser->AuthKey."'>Activate</a> link to activate your account.";
 	$sMailBody .= "</body></html>";
 	CCommon::SendMail($sUserInfo, "UXLogViewer activation", $sMailBody);
 
